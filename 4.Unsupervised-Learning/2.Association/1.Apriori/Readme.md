@@ -1,16 +1,20 @@
 # Apriori Algorithm
 
 ## Introduction
-The Apriori algorithm is a popular method used in Association Rule Learning to find frequent itemsets in large datasets. It follows the **Apriori Principle**, which states that if an itemset is frequent, then all of its subsets must also be frequent.
+Apriori is an association rule learning algorithm used for discovering relationships between items in large datasets. It is widely applied in market basket analysis, recommendation systems, and data mining tasks.
 
-## Working of Apriori Algorithm
-The algorithm follows these steps:
+## Working Principle
+The Apriori algorithm follows an iterative approach based on the **Apriori property**, which states that:
 
-1. **Find Frequent Itemsets**: Identify itemsets that occur frequently in transactions using a minimum support threshold.
-2. **Generate Association Rules**: From the frequent itemsets, generate association rules based on confidence.
-3. **Evaluate Rules Using Lift**: Determine the strength of the rules using the lift metric.
+> If an itemset is frequent, then all its subsets must also be frequent.
 
-## Key Concepts
+### Steps of the Apriori Algorithm
+1. **Calculate Support**: Identify all frequent itemsets that meet the minimum support threshold.
+2. **Generate Candidate Itemsets**: Create larger itemsets from frequent smaller itemsets.
+3. **Prune Infrequent Itemsets**: Remove itemsets that do not satisfy the support threshold.
+4. **Generate Association Rules**: Extract rules that meet the confidence threshold.
+
+## Key Metrics
 
 ### Support
 Support measures how frequently an itemset appears in the dataset:
@@ -35,28 +39,21 @@ $$
 - $Lift = 1$: No correlation
 - $Lift < 1$: Negative correlation
 
-## Algorithm Steps
-1. **Set a minimum support threshold.**
-2. **Find all frequent 1-itemsets.**
-3. **Use frequent 1-itemsets to generate candidate 2-itemsets and filter by minimum support.**
-4. **Repeat the process iteratively for higher k-itemsets until no more frequent itemsets are found.**
-5. **Generate strong association rules from the frequent itemsets based on confidence.**
-
-## Advantages
-- Easy to implement and understand.
+## Advantages of Apriori Algorithm
+- Simple and easy to implement.
 - Provides clear association rules.
-- Works well with structured transactional data.
+- Works well with structured datasets.
 
 ## Limitations
-- Computationally expensive for large datasets.
-- Requires multiple database scans.
-- Not suitable for datasets with very low support values.
+- Requires multiple scans of the dataset, making it slow for large datasets.
+- Generates a large number of candidate itemsets, leading to high memory usage.
 
 ## Applications
-- **Market Basket Analysis**: Finding frequently purchased item combinations.
-- **Fraud Detection**: Identifying suspicious transaction patterns.
-- **Medical Diagnosis**: Discovering relationships between symptoms and diseases.
-- **Recommendation Systems**: Suggesting items based on purchase history.
+- **Market Basket Analysis**: Identifying frequently bought item combinations.
+- **Recommendation Systems**: Suggesting products based on purchase history.
+- **Fraud Detection**: Discovering unusual transaction patterns.
+- **Healthcare**: Finding associations between diseases and symptoms.
+- **Web Usage Mining**: Analyzing website navigation patterns.
 
 ## Conclusion
-The Apriori algorithm is a fundamental technique in Association Learning that helps uncover meaningful relationships between items in large datasets. Despite its computational challenges, it remains widely used in various fields for discovering hidden patterns and making data-driven decisions.
+The Apriori algorithm is a fundamental technique in association rule mining. By utilizing support, confidence, and lift, it helps uncover meaningful relationships in datasets and aids decision-making in various domains.

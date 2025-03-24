@@ -7,26 +7,26 @@ Association Learning is a rule-based machine learning technique used to discover
 
 ### Support
 Support measures how frequently an itemset appears in the dataset:
-$$
+\[
 Support(A) = \frac{\text{Transactions containing } A}{\text{Total Transactions}}
-$$
+\]
 A higher support value indicates a more frequent occurrence of the itemset.
 
 ### Confidence
-Confidence measures the reliability of an association rule $A \Rightarrow B$:
-$$
+Confidence measures the reliability of an association rule \(A \Rightarrow B\):
+\[
 Confidence(A \Rightarrow B) = \frac{\text{Support}(A \cup B)}{\text{Support}(A)}
-$$
+\]
 A higher confidence value indicates a stronger rule.
 
 ### Lift
-Lift evaluates how much more likely $B$ is to occur given that $A$ has occurred, compared to $B$ occurring independently:
-$$
+Lift evaluates how much more likely \(B\) is to occur given that \(A\) has occurred, compared to \(B\) occurring independently:
+\[
 Lift(A \Rightarrow B) = \frac{\text{Confidence}(A \Rightarrow B)}{\text{Support}(B)}
-$$
-- $Lift > 1$: Positive correlation between $A$ and $B$
-- $Lift = 1$: No correlation
-- $Lift < 1$: Negative correlation
+\]
+- \(Lift > 1\): Positive correlation between \(A\) and \(B\)
+- \(Lift = 1\): No correlation
+- \(Lift < 1\): Negative correlation
 
 ## Types of Association Learning Algorithms
 
@@ -54,4 +54,3 @@ $$
 
 ## Conclusion
 Association Learning is a powerful technique for discovering hidden patterns in datasets. By utilizing measures such as support, confidence, and lift, it helps in making data-driven decisions in various domains like retail, healthcare, and security.
-
